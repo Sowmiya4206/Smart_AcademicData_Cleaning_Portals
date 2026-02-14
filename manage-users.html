@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manage Users | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SD</span>
+      <span>Smart Data Portal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="admin-portal.html">Admin Dashboard</a>
+      <a href="signin.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-head fade-up">
+      <p class="eyebrow">Admin Module</p>
+      <h1>Manage Users</h1>
+      <p class="lead">Review account roles, status, and apply moderation actions.</p>
+    </section>
+
+    <section class="portal-card fade-up delay-1">
+      <h2>User Directory</h2>
+      <div class="table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Institution</th>
+              <th>Role</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alex Carter</td>
+              <td>alex.carter@university.edu</td>
+              <td>Example University</td>
+              <td>Researcher</td>
+              <td><span class="tag tag-ok">Active</span></td>
+              <td>
+                <button class="btn btn-ghost" type="button">Block</button>
+                <button class="btn btn-ghost" type="button">Delete user</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Ravi Menon</td>
+              <td>ravi.menon@campus.edu</td>
+              <td>City College</td>
+              <td>Student</td>
+              <td><span class="tag tag-danger">Blocked</span></td>
+              <td>
+                <button class="btn btn-ghost" type="button">Unblock</button>
+                <button class="btn btn-ghost" type="button">Delete user</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Nina Roy</td>
+              <td>nina.roy@institute.edu</td>
+              <td>State Institute of Tech</td>
+              <td>Staff</td>
+              <td><span class="tag tag-ok">Active</span></td>
+              <td>
+                <button class="btn btn-ghost" type="button">Block</button>
+                <button class="btn btn-ghost" type="button">Delete user</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Academic Data Cleaning Portal</p>
+    <a href="mailto:support@smartdataportal.edu">support@smartdataportal.edu</a>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Profile | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SD</span>
+      <span>Smart Data Portal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="user-portal.html">User Dashboard</a>
+      <a href="processing.html">Processing Status</a>
+      <a href="signin.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-head fade-up">
+      <p class="eyebrow">User Profile</p>
+      <h1>Manage your account details</h1>
+      <p class="lead">Review your profile and update account password.</p>
+    </section>
+
+    <section class="portal-card fade-up delay-1 profile-wrap">
+      <h2>Profile Details</h2>
+      <form class="profile-form" action="#" method="post">
+        <label for="profile-name">Name</label>
+        <input id="profile-name" name="profile-name" type="text" value="Alex Carter" required />
+
+        <label for="profile-email">Email</label>
+        <input id="profile-email" name="profile-email" type="email" value="alex.carter@university.edu" required />
+
+        <label for="profile-institution">Institution</label>
+        <input id="profile-institution" name="profile-institution" type="text" value="Example University" required />
+
+        <label for="new-password">Change Password</label>
+        <input id="new-password" name="new-password" type="password" placeholder="Enter new password" />
+
+        <div class="hero-cta">
+          <button class="btn btn-solid" type="submit">Save Changes</button>
+          <a class="btn btn-ghost" href="signin.html">Logout</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Academic Data Cleaning Portal</p>
+    <a href="mailto:support@smartdataportal.edu">support@smartdataportal.edu</a>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

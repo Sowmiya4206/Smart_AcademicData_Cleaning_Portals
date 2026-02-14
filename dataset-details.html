@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dataset Details | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SD</span>
+      <span>Smart Data Portal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="my-datasets.html">My Datasets</a>
+      <a href="processing.html">Processing Status</a>
+      <a href="signin.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-head fade-up">
+      <p class="eyebrow">Dataset Details</p>
+      <h1 id="details-name">Dataset</h1>
+      <p class="lead">Detailed status and timeline for this dataset.</p>
+    </section>
+
+    <section class="portal-card fade-up delay-1">
+      <h2>Details</h2>
+      <div class="table-wrap">
+        <table class="portal-table">
+          <tbody>
+            <tr>
+              <th>Dataset Name</th>
+              <td id="details-name-row">-</td>
+            </tr>
+            <tr>
+              <th>Upload Date & Time</th>
+              <td id="details-time">-</td>
+            </tr>
+            <tr>
+              <th>Status</th>
+              <td id="details-status">-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-ghost" href="processing.html">Back to Processing</a>
+        <a id="details-download" class="btn btn-solid hidden" href="cleaned-course-registration.csv" download>Download Cleaned File</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Academic Data Cleaning Portal</p>
+    <a href="mailto:support@smartdataportal.edu">support@smartdataportal.edu</a>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

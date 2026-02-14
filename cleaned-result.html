@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cleaned Dataset Result | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SD</span>
+      <span>Smart Data Portal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="user-portal.html">User Dashboard</a>
+      <a href="processing.html">Processing Status</a>
+      <a href="signin.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-head fade-up">
+      <p class="eyebrow">Cleaned Dataset Result</p>
+      <h1>Admin approved dataset is ready</h1>
+      <p class="lead">Review cleaning summary, inspect preview metrics, and download the cleaned file.</p>
+    </section>
+
+    <section class="portal-card fade-up delay-1">
+      <h2>Cleaning Summary</h2>
+      <div class="result-summary-grid">
+        <div class="stat-box">
+          <span>Missing Values Fixed</span>
+          <strong>142</strong>
+        </div>
+        <div class="stat-box">
+          <span>Duplicates Removed</span>
+          <strong>37</strong>
+        </div>
+        <div class="stat-box">
+          <span>Columns Standardized</span>
+          <strong>12</strong>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="cleaned-course-registration.csv" download>Download Cleaned File</a>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-2">
+      <h2>Visualization Preview (Charts)</h2>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Records By Status</h3>
+          <div class="bar-chart" aria-label="Bar chart preview">
+            <div class="bar-row"><span>Valid</span><div class="bar"><i style="width: 86%;"></i></div><strong>86%</strong></div>
+            <div class="bar-row"><span>Corrected</span><div class="bar"><i style="width: 11%;"></i></div><strong>11%</strong></div>
+            <div class="bar-row"><span>Rejected</span><div class="bar"><i style="width: 3%;"></i></div><strong>3%</strong></div>
+          </div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Issue Distribution</h3>
+          <div class="donut-wrap" aria-label="Donut chart preview">
+            <div class="donut"></div>
+            <ul class="chart-legend">
+              <li><span class="dot dot-a"></span>Missing values</li>
+              <li><span class="dot dot-b"></span>Duplicates</li>
+              <li><span class="dot dot-c"></span>Format fixes</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Academic Data Cleaning Portal</p>
+    <a href="mailto:support@smartdataportal.edu">support@smartdataportal.edu</a>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>

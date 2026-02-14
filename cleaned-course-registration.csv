@@ -1,0 +1,6 @@
+dataset_id,student_id,course_code,attendance_percent,grade,status
+CRJ-001,S10021,CSE501,92,A,clean
+CRJ-002,S10034,CSE501,88,B+,clean
+CRJ-003,S10067,CSE507,79,B,clean
+CRJ-004,S10081,CSE512,85,A-,clean
+CRJ-005,S10102,CSE512,90,A,clean

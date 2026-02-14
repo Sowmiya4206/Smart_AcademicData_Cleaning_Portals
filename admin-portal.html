@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SD</span>
+      <span>Smart Data Portal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="user-portal.html">User Dashboard</a>
+      <a href="signin.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-head fade-up">
+      <p class="eyebrow">Admin Dashboard</p>
+      <h1>Control center for users, uploads, and approvals</h1>
+      <p class="lead">Monitor platform activity, manage records, and review workflow outcomes.</p>
+    </section>
+
+    <section class="portal-card fade-up delay-1 admin-menu">
+      <h2>Menu</h2>
+      <div class="menu-grid">
+        <a class="menu-item" href="manage-users.html">Manage Users</a>
+        <a class="menu-item" href="dataset-approvals.html">Dataset Approvals</a>
+        <a class="menu-item" href="reports-logs.html">Reports</a>
+        <a class="menu-item" href="signin.html">Logout</a>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-1">
+      <h2>Stats</h2>
+      <div class="admin-stats">
+        <div class="stat-box">
+          <span>Total Users</span>
+          <strong>428</strong>
+        </div>
+        <div class="stat-box">
+          <span>Total Uploads</span>
+          <strong>1,962</strong>
+        </div>
+        <div class="stat-box">
+          <span>Pending Approvals</span>
+          <strong>27</strong>
+        </div>
+        <div class="stat-box">
+          <span>Rejected Datasets</span>
+          <strong>61</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-2">
+      <h2>Charts</h2>
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Uploads per day</h3>
+          <div class="bar-chart" aria-label="Uploads per day chart">
+            <div class="bar-row"><span>Mon</span><div class="bar"><i style="width: 52%;"></i></div><strong>52</strong></div>
+            <div class="bar-row"><span>Tue</span><div class="bar"><i style="width: 67%;"></i></div><strong>67</strong></div>
+            <div class="bar-row"><span>Wed</span><div class="bar"><i style="width: 74%;"></i></div><strong>74</strong></div>
+            <div class="bar-row"><span>Thu</span><div class="bar"><i style="width: 61%;"></i></div><strong>61</strong></div>
+            <div class="bar-row"><span>Fri</span><div class="bar"><i style="width: 48%;"></i></div><strong>48</strong></div>
+          </div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Most common errors</h3>
+          <div class="donut-wrap" aria-label="Most common errors chart">
+            <div class="donut"></div>
+            <ul class="chart-legend">
+              <li><span class="dot dot-a"></span>Missing values</li>
+              <li><span class="dot dot-b"></span>Duplicates</li>
+              <li><span class="dot dot-c"></span>Invalid formats</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Academic Data Cleaning Portal</p>
+    <a href="mailto:support@smartdataportal.edu">support@smartdataportal.edu</a>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-layout">
+    <section class="auth-panel fade-up">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">SD</span>
+        <span>Smart Data Portal</span>
+      </a>
+      <h1>Login</h1>
+      <p>Single login page for both users and admins.</p>
+
+      <form class="auth-form" data-login-form action="user-portal.html" method="get">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@university.edu" required />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Enter your password" required />
+
+        <button class="btn btn-solid" type="submit">Login</button>
+      </form>
+
+      <p class="switch-link">No account yet? <a href="signup.html">Register</a></p>
+      <p class="switch-link">Use an admin email containing <strong>admin</strong> to open Admin Dashboard.</p>
+    </section>
+  </main>
+  <script src="assets/main.js"></script>
+</body>
+</html>

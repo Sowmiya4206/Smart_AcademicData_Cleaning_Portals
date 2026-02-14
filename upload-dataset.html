@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Dataset | Smart Academic Data Cleaning Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">SD</span>
+      <span>Smart Data Portal</span>
+    </a>
+    <nav class="nav-links">
+      <a href="user-portal.html">User Dashboard</a>
+      <a href="about.html">About</a>
+      <a href="signin.html">Logout</a>
+    </nav>
+  </header>
+
+  <main class="portal-main">
+    <section class="portal-head fade-up">
+      <p class="eyebrow">Upload Dataset</p>
+      <h1>Submit dataset for automated cleaning</h1>
+      <p class="lead">Upload your academic file and choose cleaning rules before processing.</p>
+    </section>
+
+    <section class="portal-card fade-up delay-1">
+      <h2>Dataset Submission Form</h2>
+      <form class="upload-form" data-upload-form action="processing.html" method="get">
+        <label for="dataset-title">Dataset Title</label>
+        <input id="dataset-title" name="dataset-title" type="text" placeholder="Semester 5 Attendance" required />
+
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" placeholder="Brief details about this dataset and context." required></textarea>
+
+        <label for="dataset-file">Upload CSV/Excel File</label>
+        <input id="dataset-file" name="dataset-file" type="file" accept=".csv,.xlsx,.xls" required />
+
+        <fieldset class="cleaning-options">
+          <legend>Select Cleaning Options</legend>
+          <label class="option-check"><input type="checkbox" name="cleaning" value="remove-duplicates" checked /> Remove duplicates</label>
+          <label class="option-check"><input type="checkbox" name="cleaning" value="missing-values" checked /> Handle missing values</label>
+          <label class="option-check"><input type="checkbox" name="cleaning" value="standardize-formats" checked /> Standardize formats</label>
+          <label class="option-check"><input type="checkbox" name="cleaning" value="detect-outliers" /> Detect outliers</label>
+        </fieldset>
+
+        <button class="btn btn-solid" type="submit">Submit for Processing</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Smart Academic Data Cleaning Portal</p>
+    <a href="mailto:support@smartdataportal.edu">support@smartdataportal.edu</a>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
