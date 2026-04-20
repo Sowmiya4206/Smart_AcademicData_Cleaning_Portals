@@ -23,15 +23,51 @@
   </header>
 
   <main class="portal-main">
-    <section class="portal-head fade-up">
+    <section class="portal-head fade-up reports-hero">
       <p class="eyebrow">Admin Module</p>
-      <h1>Reports & Logs</h1>
-      <p class="lead">Analytics and system activity overview for platform governance.</p>
+      <h1>Reports, system activity, and platform monitoring</h1>
+      <p class="lead">Track institutional usage, understand recurring data issues, and review recent system events in one place.</p>
+      <div class="approvals-hero-meta">
+        <span class="section-chip">Governance overview</span>
+        <span class="section-chip">Operational visibility</span>
+      </div>
     </section>
 
-    <section class="portal-grid">
+    <section class="portal-card fade-up delay-1">
+      <div class="section-head">
+        <div>
+          <h2>Monitoring Snapshot</h2>
+          <p class="section-copy">A quick summary of the metrics admins usually check first.</p>
+        </div>
+      </div>
+      <div class="reports-summary-grid">
+        <div class="stat-box">
+          <span>Total Uploads</span>
+          <strong id="reports-total-uploads">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Institutions Active</span>
+          <strong id="reports-active-institutions">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Issues Detected</span>
+          <strong id="reports-total-issues">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Recent Admin Actions</span>
+          <strong id="reports-admin-actions">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal-grid reports-grid">
       <article class="portal-card fade-up">
-        <h2>Number of uploads per institution</h2>
+        <div class="section-head">
+          <div>
+            <h2>Uploads Per Institution</h2>
+            <p class="section-copy">Institution-level activity helps highlight adoption and workload concentration.</p>
+          </div>
+        </div>
         <div class="table-wrap">
           <table class="portal-table">
             <thead>
@@ -40,18 +76,20 @@
                 <th>Uploads</th>
               </tr>
             </thead>
-            <tbody>
-              <tr><td>Example University</td><td>412</td></tr>
-              <tr><td>City College</td><td>295</td></tr>
-              <tr><td>State Institute of Tech</td><td>238</td></tr>
-              <tr><td>National Research Campus</td><td>187</td></tr>
+            <tbody id="reports-institutions-body">
+              <tr><td colspan="2">Loading data...</td></tr>
             </tbody>
           </table>
         </div>
       </article>
 
       <article class="portal-card fade-up delay-1">
-        <h2>Common data issues found</h2>
+        <div class="section-head">
+          <div>
+            <h2>Common Data Issues</h2>
+            <p class="section-copy">These issue patterns can guide template fixes and training priorities.</p>
+          </div>
+        </div>
         <div class="table-wrap">
           <table class="portal-table">
             <thead>
@@ -60,24 +98,43 @@
                 <th>Count</th>
               </tr>
             </thead>
-            <tbody>
-              <tr><td>Missing values</td><td>1,124</td></tr>
-              <tr><td>Duplicate records</td><td>643</td></tr>
-              <tr><td>Invalid date formats</td><td>372</td></tr>
-              <tr><td>Inconsistent IDs</td><td>258</td></tr>
+            <tbody id="reports-issues-body">
+              <tr><td colspan="2">Loading data...</td></tr>
             </tbody>
           </table>
         </div>
       </article>
 
+      <article class="portal-card fade-up delay-1">
+        <div class="section-head">
+          <div>
+            <h2>Admin Signals</h2>
+            <p class="section-copy">Useful cues for deciding where to focus review effort next.</p>
+          </div>
+        </div>
+        <div class="reports-insight-grid">
+          <article class="highlight-card">
+            <span class="highlight-label">Highest Load</span>
+            <strong id="reports-highest-load">-</strong>
+            <p id="reports-highest-load-copy">Upload volume analysis will appear here.</p>
+          </article>
+          <article class="highlight-card">
+            <span class="highlight-label">Top Risk</span>
+            <strong id="reports-top-risk">-</strong>
+            <p id="reports-top-risk-copy">Issue pattern guidance will appear here.</p>
+          </article>
+        </div>
+      </article>
+
       <article class="portal-card fade-up delay-2 portal-wide">
-        <h2>System logs</h2>
-        <div class="logs-box">
-          <p><span>2026-02-12 09:44:11</span> Upload accepted: semester5_attendance.csv</p>
-          <p><span>2026-02-12 09:45:03</span> Cleaning engine started for dataset #CRJ-102</p>
-          <p><span>2026-02-12 09:46:27</span> Duplicate detection completed: 31 records flagged</p>
-          <p><span>2026-02-12 09:47:08</span> Admin action: Approved cleaned dataset #CRJ-098</p>
-          <p><span>2026-02-12 09:49:16</span> Admin action: Rejected dataset #CRJ-099 (reason provided)</p>
+        <div class="section-head">
+          <div>
+            <h2>System Logs</h2>
+            <p class="section-copy">Recent operational events for audit visibility and troubleshooting context.</p>
+          </div>
+        </div>
+        <div class="logs-box" id="reports-system-logs">
+          <p><span>Loading</span> Recent system activity...</p>
         </div>
       </article>
     </section>

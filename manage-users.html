@@ -17,68 +17,101 @@
     </a>
     <nav class="nav-links">
       <a href="admin-portal.html">Admin Dashboard</a>
+      <a href="dataset-approvals.html">Dataset Approvals</a>
       <a href="signin.html">Logout</a>
     </nav>
   </header>
 
   <main class="portal-main">
-    <section class="portal-head fade-up">
+    <section class="portal-head fade-up manage-users-hero">
       <p class="eyebrow">Admin Module</p>
-      <h1>Manage Users</h1>
-      <p class="lead">Review account roles, status, and apply moderation actions.</p>
+      <h1>Manage users, roles, and moderation actions</h1>
+      <p class="lead">Track account health, review user access, and make moderation decisions without losing visibility into institutional roles.</p>
+      <div class="approvals-hero-meta">
+        <span class="section-chip">Directory overview</span>
+        <span class="section-chip">Role-based access</span>
+      </div>
     </section>
 
     <section class="portal-card fade-up delay-1">
-      <h2>User Directory</h2>
-      <div class="table-wrap">
-        <table class="portal-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Institution</th>
-              <th>Role</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Alex Carter</td>
-              <td>alex.carter@university.edu</td>
-              <td>Example University</td>
-              <td>Researcher</td>
-              <td><span class="tag tag-ok">Active</span></td>
-              <td>
-                <button class="btn btn-ghost" type="button">Block</button>
-                <button class="btn btn-ghost" type="button">Delete user</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Ravi Menon</td>
-              <td>ravi.menon@campus.edu</td>
-              <td>City College</td>
-              <td>Student</td>
-              <td><span class="tag tag-danger">Blocked</span></td>
-              <td>
-                <button class="btn btn-ghost" type="button">Unblock</button>
-                <button class="btn btn-ghost" type="button">Delete user</button>
-              </td>
-            </tr>
-            <tr>
-              <td>Nina Roy</td>
-              <td>nina.roy@institute.edu</td>
-              <td>State Institute of Tech</td>
-              <td>Staff</td>
-              <td><span class="tag tag-ok">Active</span></td>
-              <td>
-                <button class="btn btn-ghost" type="button">Block</button>
-                <button class="btn btn-ghost" type="button">Delete user</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="section-head">
+        <div>
+          <h2>User Snapshot</h2>
+          <p class="section-copy">A quick summary of the account directory and moderation state.</p>
+        </div>
       </div>
+      <div class="manage-users-summary-grid">
+        <div class="stat-box">
+          <span>Total Accounts</span>
+          <strong id="users-total-count">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Active Users</span>
+          <strong id="users-active-count">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Blocked Users</span>
+          <strong id="users-blocked-count">0</strong>
+        </div>
+        <div class="stat-box">
+          <span>Staff Accounts</span>
+          <strong id="users-admin-count">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="manage-users-layout fade-up delay-1">
+      <section class="portal-card manage-users-main">
+        <div class="section-head">
+          <div>
+            <h2>User Directory</h2>
+            <p class="section-copy">Review academic roles, institution details, and moderation options for each account.</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="portal-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Institution</th>
+                <th>Role</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="users-table-body">
+              <tr>
+                <td colspan="6">Loading users...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="manage-users-side">
+        <section class="portal-card">
+          <span class="health-kicker">Moderation Guide</span>
+          <h2>When to block an account</h2>
+          <ul class="health-list">
+            <li>Repeated invalid uploads create avoidable admin workload.</li>
+            <li>Access is being used outside the assigned institutional role.</li>
+            <li>Account activity conflicts with portal policy or review rules.</li>
+            <li>A user needs temporary restriction while records are verified.</li>
+          </ul>
+        </section>
+
+        <section class="portal-card">
+          <span class="health-kicker">Admin Focus</span>
+          <h2>Recommended next actions</h2>
+          <div class="logs-box">
+            <p><span>Review</span> Revisit recently blocked accounts weekly</p>
+            <p><span>Align</span> Keep roles matched to institution responsibility</p>
+            <p><span>Document</span> Capture reasons for major moderation actions</p>
+            <p><span>Protect</span> Remove stale or duplicate accounts when needed</p>
+          </div>
+        </section>
+      </aside>
     </section>
   </main>
 

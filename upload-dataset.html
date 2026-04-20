@@ -23,34 +23,107 @@
   </header>
 
   <main class="portal-main">
-    <section class="portal-head fade-up">
+    <section class="portal-head fade-up upload-hero">
       <p class="eyebrow">Upload Dataset</p>
-      <h1>Submit dataset for automated cleaning</h1>
-      <p class="lead">Upload your academic file and choose cleaning rules before processing.</p>
+      <h1>Submit a dataset for guided academic data cleaning</h1>
+      <p class="lead">Student accounts can upload source files here, then the admin reviews the data and approves or rejects the dataset after checking it.</p>
+      <div class="approvals-hero-meta">
+        <span class="section-chip">CSV and Excel supported</span>
+        <span class="section-chip">Admin review starts after submit</span>
+      </div>
     </section>
 
     <section class="portal-card fade-up delay-1">
-      <h2>Dataset Submission Form</h2>
-      <form class="upload-form" data-upload-form action="processing.html" method="get">
-        <label for="dataset-title">Dataset Title</label>
-        <input id="dataset-title" name="dataset-title" type="text" placeholder="Semester 5 Attendance" required />
+      <div class="section-head">
+        <div>
+          <h2>Before You Upload</h2>
+          <p class="section-copy">A few quick reminders help improve cleaning accuracy and reduce review delays.</p>
+        </div>
+      </div>
+      <div class="upload-guidance-grid">
+        <article class="highlight-card">
+          <span class="highlight-label">1. Use Clear Titles</span>
+          <strong>Name files so reviewers understand the context</strong>
+          <p>Include the batch, department, or reporting period whenever possible.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">2. Add Short Context</span>
+          <strong>Describe what the dataset contains</strong>
+          <p>A short description helps the cleaning review stay aligned with the academic purpose of the file.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">3. Choose Cleaning Rules</span>
+          <strong>Select only the checks you want applied</strong>
+          <p>This keeps the processing flow predictable and easier to validate after cleaning.</p>
+        </article>
+      </div>
+    </section>
 
-        <label for="description">Description</label>
-        <textarea id="description" name="description" rows="4" placeholder="Brief details about this dataset and context." required></textarea>
+    <section class="upload-layout fade-up delay-1">
+      <section class="portal-card">
+        <div class="section-head">
+          <div>
+            <h2>Dataset Submission Form</h2>
+          <p class="section-copy">Only active student accounts can submit here. After upload, the dataset enters the admin review queue and waits for approval or rejection.</p>
+          </div>
+        </div>
+        <form class="upload-form" data-upload-form action="processing.html" method="get">
+          <label for="dataset-title">Dataset Title</label>
+          <input id="dataset-title" name="dataset-title" type="text" placeholder="Semester 5 Attendance" required />
 
-        <label for="dataset-file">Upload CSV/Excel File</label>
-        <input id="dataset-file" name="dataset-file" type="file" accept=".csv,.xlsx,.xls" required />
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="4" placeholder="Brief details about this dataset and context." required></textarea>
 
-        <fieldset class="cleaning-options">
-          <legend>Select Cleaning Options</legend>
-          <label class="option-check"><input type="checkbox" name="cleaning" value="remove-duplicates" checked /> Remove duplicates</label>
-          <label class="option-check"><input type="checkbox" name="cleaning" value="missing-values" checked /> Handle missing values</label>
-          <label class="option-check"><input type="checkbox" name="cleaning" value="standardize-formats" checked /> Standardize formats</label>
-          <label class="option-check"><input type="checkbox" name="cleaning" value="detect-outliers" /> Detect outliers</label>
-        </fieldset>
+          <label for="dataset-file">Upload CSV/Excel File</label>
+          <input id="dataset-file" name="dataset-file" type="file" accept=".csv,.xlsx,.xls" required />
 
-        <button class="btn btn-solid" type="submit">Submit for Processing</button>
-      </form>
+          <fieldset class="cleaning-options">
+            <legend>Select Cleaning Options</legend>
+            <label class="option-check"><input type="checkbox" name="cleaning" value="remove-duplicates" checked /> Remove duplicates</label>
+            <label class="option-check"><input type="checkbox" name="cleaning" value="missing-values" checked /> Handle missing values</label>
+            <label class="option-check"><input type="checkbox" name="cleaning" value="standardize-formats" checked /> Standardize formats</label>
+            <label class="option-check"><input type="checkbox" name="cleaning" value="detect-outliers" /> Detect outliers</label>
+          </fieldset>
+
+          <fieldset class="cleaning-options">
+            <legend>Approval Mode</legend>
+            <label class="option-check">
+              <input type="checkbox" name="auto-approve" value="low-risk" />
+              Request automatic approval for low-risk CSV datasets
+            </label>
+            <p class="section-copy">Auto-approval only applies when the file is a CSV, the description is detailed enough, and at least two cleaning checks are selected. Otherwise it still goes to admin review.</p>
+          </fieldset>
+
+          <div class="hero-cta">
+            <button class="btn btn-solid" type="submit">Submit for Admin Review</button>
+            <a class="btn btn-ghost" href="my-datasets.html">View My Datasets</a>
+          </div>
+        </form>
+      </section>
+
+      <aside class="upload-side">
+        <section class="portal-card">
+          <span class="health-kicker">Accepted Inputs</span>
+          <h2>Recommended file content</h2>
+          <ul class="health-list">
+            <li>Academic spreadsheets with stable headers and clear field names.</li>
+            <li>Attendance, registration, result, or student profile exports.</li>
+            <li>Files that match a single reporting purpose or workflow.</li>
+            <li>Datasets small enough to review clearly after cleaning.</li>
+          </ul>
+        </section>
+
+        <section class="portal-card">
+          <span class="health-kicker">Processing Notes</span>
+          <div class="logs-box">
+            <p><span>Status</span> Files move to waiting for admin approval after submit</p>
+            <p><span>Review</span> Only admin@smartdataportal.edu can approve or reject after checking the data</p>
+            <p><span>Auto Approval</span> Optional for low-risk student CSV uploads</p>
+            <p><span>Output</span> Cleaned file appears after completion</p>
+            <p><span>Traceability</span> Dataset history is stored in the portal</p>
+          </div>
+        </section>
+      </aside>
     </section>
   </main>
 

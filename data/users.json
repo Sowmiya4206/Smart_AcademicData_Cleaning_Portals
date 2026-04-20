@@ -1,0 +1,72 @@
+[
+  {
+    "id": "user-admin-1",
+    "name": "Admin User",
+    "email": "admin@smartdataportal.edu",
+    "institution": "Smart Data Portal",
+    "role": "admin",
+    "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+    "status": "active",
+    "createdAt": "2026-04-08T18:00:00.000Z"
+  },
+  {
+    "id": "user-demo-1",
+    "name": "Alex Carter",
+    "email": "alex.carter@university.edu",
+    "institution": "Example University",
+    "role": "staff",
+    "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+    "status": "active",
+    "createdAt": "2026-04-08T18:05:00.000Z"
+  },
+  {
+    "id": "user-1776526986024-e93097",
+    "name": "sowmiya",
+    "email": "sowmiya.cs23@bitsathy.ac.in",
+    "institution": "bannari amman institute of technology",
+    "role": "student",
+    "passwordHash": "f52c76a63cf3fcbe666052a49045f14b1862cbc82cae4f9edd2249c293e45b18",
+    "status": "active",
+    "createdAt": "2026-04-18T15:43:06.038Z"
+  },
+  {
+    "id": "user-1776527690823-30ff07",
+    "name": "sow",
+    "email": "sowmiyas549@gmail.com",
+    "institution": "bannari amman institute of technology",
+    "role": "staff",
+    "passwordHash": "f52c76a63cf3fcbe666052a49045f14b1862cbc82cae4f9edd2249c293e45b18",
+    "status": "active",
+    "createdAt": "2026-04-18T15:54:50.836Z"
+  },
+  {
+    "id": "user-1776694551232-84c298",
+    "name": "sowmiyas",
+    "email": "sowmiyasss549@gmail.com",
+    "institution": "bannari amman institute of technology",
+    "role": "staff",
+    "passwordHash": "f52c76a63cf3fcbe666052a49045f14b1862cbc82cae4f9edd2249c293e45b18",
+    "status": "active",
+    "createdAt": "2026-04-20T14:15:51.287Z"
+  },
+  {
+    "id": "user-1776694969839-c24828",
+    "name": "sundar",
+    "email": "sundar54@gmail.com",
+    "institution": "AVMS",
+    "role": "staff",
+    "passwordHash": "f52c76a63cf3fcbe666052a49045f14b1862cbc82cae4f9edd2249c293e45b18",
+    "status": "active",
+    "createdAt": "2026-04-20T14:22:49.842Z"
+  },
+  {
+    "id": "user-1776695082136-6d0e36",
+    "name": "sowmiya",
+    "email": "sowmi54@gmail.com",
+    "institution": "bannari amman institute of technology",
+    "role": "student",
+    "passwordHash": "f52c76a63cf3fcbe666052a49045f14b1862cbc82cae4f9edd2249c293e45b18",
+    "status": "active",
+    "createdAt": "2026-04-20T14:24:42.136Z"
+  }
+]

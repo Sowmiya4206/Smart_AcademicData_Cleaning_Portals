@@ -25,44 +25,121 @@
   <main class="portal-main">
     <section class="portal-head fade-up">
       <p class="eyebrow">Admin Dashboard</p>
-      <h1>Control center for users, uploads, and approvals</h1>
-      <p class="lead">Monitor platform activity, manage records, and review workflow outcomes.</p>
+      <h1>Control center for users, uploads, approvals, and platform health</h1>
+      <p class="lead">Track the review queue, spot risk areas early, and keep academic data operations moving smoothly.</p>
     </section>
 
     <section class="portal-card fade-up delay-1 admin-menu">
-      <h2>Menu</h2>
+      <div class="section-head">
+        <div>
+          <h2>Admin Shortcuts</h2>
+          <p class="section-copy">Jump into the tasks that usually need attention first.</p>
+        </div>
+        <span class="section-chip">Live workspace</span>
+      </div>
       <div class="menu-grid">
         <a class="menu-item" href="manage-users.html">Manage Users</a>
-        <a class="menu-item" href="dataset-approvals.html">Dataset Approvals</a>
+        <a class="menu-item" href="user-portal.html">Staff Review Portal</a>
         <a class="menu-item" href="reports-logs.html">Reports</a>
         <a class="menu-item" href="signin.html">Logout</a>
       </div>
     </section>
 
     <section class="portal-card fade-up delay-1">
-      <h2>Stats</h2>
+      <div class="section-head">
+        <div>
+          <h2>Platform Snapshot</h2>
+          <p class="section-copy">A quick view of volume, approvals, and risk signals.</p>
+        </div>
+        <span class="section-chip" id="admin-last-sync">Synced just now</span>
+      </div>
       <div class="admin-stats">
         <div class="stat-box">
-          <span>Total Users</span>
-          <strong>428</strong>
+          <span>Total Datasets</span>
+          <strong id="admin-total-datasets">0</strong>
         </div>
         <div class="stat-box">
-          <span>Total Uploads</span>
-          <strong>1,962</strong>
+          <span>Pending Review</span>
+          <strong id="admin-pending-count">0</strong>
         </div>
         <div class="stat-box">
-          <span>Pending Approvals</span>
-          <strong>27</strong>
+          <span>Approved</span>
+          <strong id="admin-approved-count">0</strong>
         </div>
         <div class="stat-box">
-          <span>Rejected Datasets</span>
-          <strong>61</strong>
+          <span>Rejected</span>
+          <strong id="admin-rejected-count">0</strong>
         </div>
+      </div>
+      <div class="admin-highlights">
+        <article class="highlight-card">
+          <span class="highlight-label">Approval Rate</span>
+          <strong id="admin-approval-rate">0%</strong>
+          <p>Accepted datasets compared with all completed review decisions.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">Queue Pressure</span>
+          <strong id="admin-queue-pressure">Low</strong>
+          <p id="admin-queue-summary">No datasets are waiting for review right now.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">Most Recent Upload</span>
+          <strong id="admin-latest-upload">No uploads yet</strong>
+          <p id="admin-latest-upload-meta">New submissions will appear here automatically.</p>
+        </article>
       </div>
     </section>
 
     <section class="portal-card fade-up delay-2">
-      <h2>Charts</h2>
+      <div class="section-head">
+        <div>
+          <h2>Operations Overview</h2>
+          <p class="section-copy">Use this section to review activity, unblock approvals, and monitor service quality.</p>
+        </div>
+      </div>
+      <div class="admin-overview-grid">
+        <article class="admin-panel">
+          <div class="mini-head">
+            <h3>Review Queue</h3>
+            <a class="btn btn-ghost" href="user-portal.html">Open staff portal</a>
+          </div>
+          <div class="table-wrap">
+            <table class="portal-table">
+              <thead>
+                <tr>
+                  <th>Dataset</th>
+                  <th>Submitted By</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="admin-review-queue">
+                <tr>
+                  <td colspan="3">No datasets waiting for review.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="admin-panel">
+          <div class="mini-head">
+            <h3>Recent Activity</h3>
+            <a class="btn btn-ghost" href="reports-logs.html">View logs</a>
+          </div>
+          <ul class="activity-feed" id="admin-activity-feed">
+            <li>No recent activity available.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-2">
+      <div class="section-head">
+        <div>
+          <h2>Charts</h2>
+          <p class="section-copy">A lightweight visual summary of throughput and data quality issues.</p>
+        </div>
+      </div>
       <div class="chart-grid">
         <article class="chart-card">
           <h3>Uploads per day</h3>
@@ -88,6 +165,36 @@
         </article>
       </div>
     </section>
+
+    <section class="portal-card fade-up delay-2">
+      <div class="section-head">
+        <div>
+          <h2>Service Health</h2>
+          <p class="section-copy">Operational notes that help admins decide where to focus next.</p>
+        </div>
+      </div>
+      <div class="health-grid">
+        <article class="health-card">
+          <span class="health-kicker">Moderation</span>
+          <h3 id="admin-health-headline">Review queue is stable</h3>
+          <p id="admin-health-copy">Current review load looks healthy.</p>
+        </article>
+        <article class="health-card">
+          <span class="health-kicker">Data Quality</span>
+          <h3>Common failure signals</h3>
+          <ul class="health-list">
+            <li>Missing values continue to be the top cleanup issue.</li>
+            <li>Duplicate records are the second most common cause of intervention.</li>
+            <li>Invalid formats usually appear in imported spreadsheet fields.</li>
+          </ul>
+        </article>
+        <article class="health-card">
+          <span class="health-kicker">Next Best Action</span>
+          <h3 id="admin-next-action">Review pending submissions</h3>
+          <p id="admin-next-action-copy">Open the staff portal to process new student datasets.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -98,6 +205,3 @@
   <script src="assets/main.js"></script>
 </body>
 </html>
-
-
-

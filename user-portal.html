@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>User Dashboard | Smart Academic Data Cleaning Portal</title>
+  <title>Portal | Smart Academic Data Cleaning Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -18,43 +18,72 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="admin-portal.html">Admin Dashboard</a>
+      <a href="signin.html?mode=admin">Admin Dashboard</a>
       <a href="signin.html">Logout</a>
     </nav>
   </header>
 
   <main class="portal-main">
     <section class="portal-head fade-up">
-      <p class="eyebrow">User Dashboard</p>
-      <h1>Welcome back to your dashboard.</h1>
-      <p class="lead">Track your uploads, cleaned files, and approval progress from one place.</p>
+      <p class="eyebrow" id="portal-role-label">Portal</p>
+      <h1 id="user-dashboard-title">Welcome back to your dashboard.</h1>
+      <p class="lead" id="student-dashboard-copy">Students can upload datasets here, and staff review each submission before approving or rejecting it.</p>
+      <p class="lead" id="staff-dashboard-copy" hidden>Staff can review student uploads here, open each dataset, and approve or reject submissions directly from this portal.</p>
     </section>
 
     <section class="portal-card fade-up delay-1">
-      <h2>Quick Stats</h2>
+      <h2 id="dashboard-stats-heading">Quick Stats</h2>
       <div class="dashboard-stats">
         <div class="stat-box">
-          <span>Files Uploaded</span>
-          <strong>24</strong>
+          <span id="dashboard-stat-1-label">Files Uploaded</span>
+          <strong id="user-files-uploaded">0</strong>
         </div>
         <div class="stat-box">
-          <span>Files Cleaned</span>
-          <strong>19</strong>
+          <span id="dashboard-stat-2-label">Files Cleaned</span>
+          <strong id="user-files-cleaned">0</strong>
         </div>
         <div class="stat-box">
-          <span>Pending Approvals</span>
-          <strong>5</strong>
+          <span id="dashboard-stat-3-label">Pending Approvals</span>
+          <strong id="user-files-pending">0</strong>
         </div>
       </div>
     </section>
 
-    <section class="portal-card fade-up delay-2">
-      <h2>Actions</h2>
+    <section class="portal-card fade-up delay-2" id="student-dashboard-actions">
+      <h2 id="dashboard-actions-heading">Actions</h2>
       <div class="dashboard-actions">
         <a id="upload" class="btn btn-solid" href="upload-dataset.html">Upload Dataset</a>
         <a id="my-datasets" class="btn btn-ghost" href="my-datasets.html">View My Datasets</a>
         <a class="btn btn-ghost" href="profile.html">Profile</a>
         <a class="btn btn-ghost" href="signin.html">Logout</a>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-2" id="staff-review-panel" hidden>
+      <div class="section-head">
+        <div>
+          <h2>Staff Review Queue</h2>
+          <p class="section-copy">Student uploads waiting for a staff decision appear here automatically.</p>
+        </div>
+        <a class="btn btn-ghost" href="profile.html">Open Profile</a>
+      </div>
+      <div class="table-wrap">
+        <table class="portal-table">
+          <thead>
+            <tr>
+              <th>Dataset Name</th>
+              <th>Student Email</th>
+              <th>Submitted At</th>
+              <th>Details</th>
+              <th>Decision</th>
+            </tr>
+          </thead>
+          <tbody id="staff-review-body">
+            <tr>
+              <td colspan="5">No student datasets are waiting for staff review.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "ds-1776695116706-744e16",
+    "name": "sem_5",
+    "uploadedAt": "2026-04-20T14:25:16.706Z",
+    "status": "Approved ✅",
+    "uploadedBy": "sowmi54@gmail.com",
+    "description": "sem database",
+    "fileName": "messy_academic_dataset2 (2).csv",
+    "cleaningOptions": [
+      "remove-duplicates",
+      "missing-values",
+      "standardize-formats"
+    ],
+    "verifiedAt": "2026-04-20T15:25:10.570Z",
+    "verifiedBy": "sundar54@gmail.com",
+    "verifiedByName": "sundar",
+    "decisionReason": ""
+  },
+  {
+    "id": "ds-1776529165542-62582f",
+    "name": "sem_5",
+    "uploadedAt": "2026-04-18T16:19:25.558Z",
+    "status": "Rejected ❌ - duplicate entry",
+    "uploadedBy": "sowmiyas549@gmail.com",
+    "description": "marksheet",
+    "fileName": "messy_academic_dataset2.csv",
+    "cleaningOptions": [
+      "remove-duplicates",
+      "missing-values",
+      "standardize-formats"
+    ],
+    "verifiedAt": "2026-04-20T15:28:03.351Z",
+    "verifiedBy": "sundar54@gmail.com",
+    "verifiedByName": "sundar",
+    "decisionReason": "duplicate entry"
+  },
+  {
+    "id": "ds-1776527160136-1354a7",
+    "name": "sem_5",
+    "uploadedAt": "2026-04-18T15:46:00.136Z",
+    "status": "Processing ⏳",
+    "uploadedBy": "sowmiya.cs23@bitsathy.ac.in",
+    "description": "marksheet",
+    "fileName": "messy_academic_dataset2.csv",
+    "cleaningOptions": [
+      "remove-duplicates",
+      "missing-values",
+      "standardize-formats"
+    ]
+  },
+  {
+    "id": "seed-1",
+    "name": "semester5_attendance.csv",
+    "uploadedAt": "2026-04-08T17:00:00.000Z",
+    "status": "Processing ⏳",
+    "uploadedBy": "anika.s"
+  },
+  {
+    "id": "seed-2",
+    "name": "exam_results_batch2.xlsx",
+    "uploadedAt": "2026-04-07T17:00:00.000Z",
+    "status": "Waiting for Admin Approval 🟡",
+    "uploadedBy": "dean.office"
+  },
+  {
+    "id": "seed-3",
+    "name": "course_registration_jan.csv",
+    "uploadedAt": "2026-04-06T17:00:00.000Z",
+    "status": "Approved ✅",
+    "uploadedBy": "registrar.team"
+  },
+  {
+    "id": "seed-4",
+    "name": "student_profile_dump.xlsx",
+    "uploadedAt": "2026-04-05T17:00:00.000Z",
+    "status": "Rejected ❌ - Invalid headers",
+    "uploadedBy": "staff.user"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "name": "smart-data-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal backend for the Smart Academic Data Cleaning Portal",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

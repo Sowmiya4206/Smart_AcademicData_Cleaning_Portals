@@ -23,14 +23,23 @@
   </header>
 
   <main class="portal-main">
-    <section class="portal-head fade-up">
+    <section class="portal-head fade-up result-hero">
       <p class="eyebrow">Cleaned Dataset Result</p>
-      <h1>Admin approved dataset is ready</h1>
-      <p class="lead">Review cleaning summary, inspect preview metrics, and download the cleaned file.</p>
+      <h1>Your cleaned dataset is approved and ready to use</h1>
+      <p class="lead">Review the data-quality summary, confirm what changed during cleaning, and download the approved output for reporting or analysis.</p>
+      <div class="result-hero-meta">
+        <span class="section-chip">Approval status: Completed</span>
+        <span class="section-chip">Dataset: course_registration_jan.csv</span>
+      </div>
     </section>
 
     <section class="portal-card fade-up delay-1">
-      <h2>Cleaning Summary</h2>
+      <div class="section-head">
+        <div>
+          <h2>Cleaning Summary</h2>
+          <p class="section-copy">A quick snapshot of the most important corrections applied to the approved dataset.</p>
+        </div>
+      </div>
       <div class="result-summary-grid">
         <div class="stat-box">
           <span>Missing Values Fixed</span>
@@ -45,13 +54,85 @@
           <strong>12</strong>
         </div>
       </div>
+      <div class="result-detail-grid">
+        <article class="highlight-card">
+          <span class="highlight-label">Data Confidence</span>
+          <strong>97% ready for reporting</strong>
+          <p>The dataset passed final admin review and is suitable for downstream academic workflows.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">Processing Outcome</span>
+          <strong>High-impact issues corrected</strong>
+          <p>The cleaning flow resolved formatting, duplication, and completeness issues before approval.</p>
+        </article>
+        <article class="highlight-card">
+          <span class="highlight-label">Recommended Action</span>
+          <strong>Download and archive this version</strong>
+          <p>Use this approved export as the trusted copy for reporting, dashboards, and record sharing.</p>
+        </article>
+      </div>
       <div class="hero-cta">
         <a class="btn btn-solid" href="cleaned-course-registration.csv" download>Download Cleaned File</a>
+        <a class="btn btn-ghost" href="dataset-details.html?id=seed-3">View Dataset Details</a>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-1">
+      <div class="section-head">
+        <div>
+          <h2>Quality Checklist</h2>
+          <p class="section-copy">The approved result reflects the most important cleanup steps completed during processing.</p>
+        </div>
+      </div>
+      <div class="result-check-grid">
+        <article class="health-card">
+          <span class="health-kicker">Completeness</span>
+          <h3>Critical missing fields were resolved</h3>
+          <p>Required academic records were normalized so incomplete entries no longer block reporting.</p>
+        </article>
+        <article class="health-card">
+          <span class="health-kicker">Consistency</span>
+          <h3>Field formatting now follows a common standard</h3>
+          <p>Student identifiers, date values, and course-related columns were aligned for safer reuse.</p>
+        </article>
+        <article class="health-card">
+          <span class="health-kicker">Approval</span>
+          <h3>Admin validation is complete</h3>
+          <p>The cleaned output was reviewed and approved for download, sharing, and institutional use.</p>
+        </article>
       </div>
     </section>
 
     <section class="portal-card fade-up delay-2">
-      <h2>Visualization Preview (Charts)</h2>
+      <div class="section-head">
+        <div>
+          <h2>Dataset Snapshot</h2>
+          <p class="section-copy">A compact view of the file state after cleaning and approval.</p>
+        </div>
+      </div>
+      <div class="result-snapshot-grid">
+        <div class="logs-box">
+          <p><span>File</span> course_registration_jan.csv</p>
+          <p><span>Rows Reviewed</span> 1,248</p>
+          <p><span>Approved Version</span> v2.1</p>
+          <p><span>Reviewed By</span> admin.portal</p>
+        </div>
+        <div class="logs-box">
+          <p><span>Remaining Rejections</span> 3%</p>
+          <p><span>Correction Rate</span> 11%</p>
+          <p><span>Validated Records</span> 86%</p>
+          <p><span>Export Status</span> Ready for download</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="portal-card fade-up delay-2">
+      <div class="section-head">
+        <div>
+          <h2>Visualization Preview</h2>
+          <p class="section-copy">A quick visual summary of how the cleaned dataset is distributed after processing.</p>
+        </div>
+      </div>
       <div class="chart-grid">
         <article class="chart-card">
           <h3>Records By Status</h3>
